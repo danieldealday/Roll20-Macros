@@ -1,0 +1,23 @@
+# STR/DEX Skill Check
+&{template:default} {{name=Strength/Dexterity Skills}} {{Athletics=[[1d20@{halflingluck}+[[@{athletics_bonus}]][ATH]]] | [[1d20@{halflingluck}+[[@{athletics_bonus}]][ATH]]]}} {{Acrobatics=[[1d20@{halflingluck}+[[@{acrobatics_bonus}]][ACR]]] | [[1d20@{halflingluck}+[[@{acrobatics_bonus}]][ACR]]]}} {{Sleight of Hand=[[1d20@{halflingluck}+[[@{sleight_of_hand_bonus}]][SLE]]] | [[1d20@{halflingluck}+[[@{sleight_of_hand_bonus}]][SLE]]]}} {{Stealth=[[1d20@{halflingluck}+[[@{stealth_bonus}]][STE]]] | [[1d20@{halflingluck}+[[@{stealth_bonus}]][STE]]]}}
+
+# WIS Skill Check
+&{template:default} {{name=Wisdom Skills}} {{Animal Handling=[[1d20@{halflingluck}+[[@{animal_handling_bonus}]][ANI]]] | [[1d20@{halflingluck}+[[@{animal_handling_bonus}]][ANI]]]}} {{Insight=[[1d20@{halflingluck}+[[@{insight_bonus}]][INS]]] | [[1d20@{halflingluck}+[[@{insight_bonus}]][INS]]]}} {{Medicine=[[1d20@{halflingluck}+[[@{medicine_bonus}]][MED]]] | [[1d20@{halflingluck}+[[@{medicine_bonus}]][MED]]]}} {{Perception=[[1d20@{halflingluck}+[[@{perception_bonus}]][PER]]] | [[1d20@{halflingluck}+[[@{perception_bonus}]][PER]]]}} {{Survival=[[1d20@{halflingluck}+[[@{survival_bonus}]][SUR]]] | [[1d20@{halflingluck}+[[@{survival_bonus}]][SUR]]]}}
+
+# INT Skill Check
+&{template:default} {{name=Intelligence Skills}} {{Arcana=[[1d20@{halflingluck}+[[@{arcana_bonus}]][ARC]]] | [[1d20@{halflingluck}+[[@{arcana_bonus}]][ARC]]]}} {{History=[[1d20@{halflingluck}+[[@{history_bonus}]][HIS]]] | [[1d20@{halflingluck}+[[@{history_bonus}]][HIS]]]}} {{Investigation=[[1d20@{halflingluck}+[[@{investigation_bonus}]][INV]]] | [[1d20@{halflingluck}+[[@{investigation_bonus}]][INV]]]}} {{Nature=[[1d20@{halflingluck}+[[@{nature_bonus}]][NAT]]] | [[1d20@{halflingluck}+[[@{nature_bonus}]][NAT]]]}} {{Religion=[[1d20@{halflingluck}+[[@{religion_bonus}]][REL]]] | [[1d20@{halflingluck}+[[@{religion_bonus}]][REL]]]}}
+
+# CHA Skill Check
+&{template:default} {{name=Charisma Skills}} {{Deception=[[1d20@{halflingluck}+[[@{deception_bonus}]][DEC]]] | [[1d20@{halflingluck}+[[@{deception_bonus}]][DEC]]]}} {{Intimidation=[[1d20@{halflingluck}+[[@{intimidation_bonus}]][INT]]] | [[1d20@{halflingluck}+[[@{intimidation_bonus}]][INT]]]}} {{Performance=[[1d20@{halflingluck}+[[@{performance_bonus}]][PER]]] | [[1d20@{halflingluck}+[[@{performance_bonus}]][PER]]]}} {{Persuasion=[[1d20@{halflingluck}+[[@{persuasion_bonus}]][PER]]] | [[1d20@{halflingluck}+[[@{persuasion_bonus}]][PER]]]}}
+
+# Initiative
+@{wtype}&{template:simple} {{rname=^{init-u}}} {{mod=[[@{initiative_bonus}[INIT]]]}} {{r1=[[1d20@{halflingluck}+[[@{initiative_bonus}]][INIT] &{tracker}]]}} {{normal=1}} @{charname_output}
+
+# Ability Check
+&{template:default} {{name=Ability Check}} {{Strength=[[1d20 +@{strength_mod}]] [[1d20 +@{strength_mod}]]}} {{Dexterity=[[1d20 +@{dexterity_mod}]] [[1d20 +@{dexterity_mod}]]}} {{Constitution= [[1d20 +@{constitution_mod}]] [[1d20 +@{constitution_mod}]]}} {{Intelligence= [[1d20 +@{intelligence_mod}]] [[1d20 +@{intelligence_mod}]]}} {{Wisdom= [[1d20 +@{wisdom_mod}]] [[1d20 +@{wisdom_mod}]]}} {{Charisma= [[1d20 +@{charisma_mod}]] [[1d20 +@{charisma_mod}]]}}
+
+# Ability Scores Roll
+ &{template:npcaction} {{rname= Ability Scores Roll}} {{name=@{character_name}}} {{description=[[4d6r1dl1]] [[4d6r1dl1]] [[4d6r1dl1]] [[4d6r1dl1]] [[4d6r1dl1]] [[4d6r1dl1]]}}
+
+ # Saving Throws
+ &{template:default} {{name=Saving Throw}} {{Strength=[[1d20 +@{strength_save_bonus}]] [[1d20 +@{strength_save_bonus}]]}} {{Dexterity=[[1d20 +@{dexterity_save_bonus}]] [[1d20 +@{dexterity_save_bonus}]]}} {{Constitution=[[1d20 +@{constitution_save_bonus}]] [[1d20 +@{constitution_save_bonus}]]}} {{Intelligence=[[1d20 +@{intelligence_save_bonus}]] [[1d20 +@{intelligence_save_bonus}]]}} {{Wisdom=[[1d20 +@{wisdom_save_bonus}]] [[1d20 +@{wisdom_save_bonus}]]}} {{Charisma=[[1d20 +@{charisma_save_bonus}]] [[1d20 +@{charisma_save_bonus}]]}}

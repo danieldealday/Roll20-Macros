@@ -1,0 +1,14 @@
+#Multiple Macro Buttons
+
+/w gm &{template:npcaction} {{rname=Macro Buttons}} {{name=Set of Macro Generators}} {{description=
+    [buttonName1](!&#13;#tableMacroName1)
+    [buttonName2](!&#13;#tableMacroName2)
+}}
+
+#Multiple Table Roll
+
+/w gm &{template:npcaction} {{rname=Table Roll Name}} {{name=Items from table}}
+    {{description=
+        [[1t[tableName1]]]
+        [[1t[tableName2]]]
+    }}

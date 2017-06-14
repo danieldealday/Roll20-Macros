@@ -1,0 +1,33 @@
+#Action
+%{selected|repeating_npcaction_$1_npc_action}
+
+#Trait
+/w gm &{template:npcaction} {{name=@{selected|npc_name}}} {{rname=@{selected|repeating_npctrait_$0_name}}} {{description=@{selected|repeating_npctrait_$0_desc}}}
+
+#Reaction
+/w gm &{template:npcaction} {{name=@{selected|npc_name}}} {{rname=@{selected|repeating_npcreaction_$0_name}}} {{description=@{selected|repeating_npcreaction_$0_desc} }}
+
+#Spell
+%{selected|repeating_spell-npc_$0_spell}
+
+#Number of Legendary Actions
+/w gm @{selected|wtype}&{template:npcaction} {{name=@{selected|npc_name}}} {{rname=Legendary Actions}} {{description=The @{selected|npc_name} can take @{selected|npc_legendary_actions} legendary actions, choosing from the options below. Only one legendary option can be used at a time and only at the end of another creature's turn. The @{selected|npc_name} regains spent legendary actions at the start of its turn.}} @{selected|charname_output}
+
+#Legendary Action
+%{selected|repeating_npcaction-l_$0_npc_action}
+
+#Initiative
+/w gm %{selected|npc_init}
+
+#Saving Throws
+/w gm &{template:default} {{name=Saving Throws}} {{Str Save= [[1d20+@{npcd_str_mod}]] | [[1d20+@{npcd_str_mod}]]}} {{Dex Save= [[1d20+@{npcd_dex_mod}]] | [[1d20+@{npcd_dex_mod}]]}} {{Con Save= [[1d20+@{npcd_con_mod}]] | [[1d20+@{npcd_con_mod}]]}} {{Int Save= [[1d20+@{npcd_int_mod}]] | [[1d20+@{npcd_int_mod}]]}} {{Wis Save= [[1d20+@{npcd_wis_mod}]] | [[1d20+@{npcd_wis_mod}]]}} {{Cha Save= [[1d20+@{npcd_cha_mod}]] | [[1d20+@{npcd_cha_mod}]]}}
+
+Damage Resistance & Immunities
+/w gm &{template:default} {{name=DR/Immunities}} {{Damage Resistance= @{selected|npc_resistances}}} {{Damage Vulnerability= @{selected|npc_vulnerabilities}}} {{Damage Immunity= @{selected|npc_immunities}}} {{Condition Immunity= @{selected|npc_condition_immunities}}}
+
+Perception
+/w gm %{Selected|npc_perception}
+@{selected|wtype}&{template:npc} {{name=@{selected|npc_name}}} {{rname=Perception}} {{mod=@{selected|npc_perception}}} {{r1=[[1d20+@{selected|npc_perception}]]}} @{selected|rtype}+@{selected|npc_perception}]]}}
+
+Statistics
+/w gm &{template:default} {{name=Stats}} {{Armor Class= @{selected|npc_AC} @{selected|npcd_actype}}} {{Hit Dice= @{selected|npc_hpformula} | [[@{selected|npc_hpformula}]]}} {{Speed= @{selected|npc_speed}}} {{Senses=@{selected|npc_senses}}}

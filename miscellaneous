@@ -1,0 +1,25 @@
+# Token Targeting Emote
+/em @{selected|character_name} swings his sword at @{target|token_name}!
+
+# Rogue: Green-Flame Blade/Sneak Attack & Weapon Choice
+&{template:atkdmg} {{mod=}} {{rname=Green-Flame Blade}} {{r1=[[1d20 +@{pb} +@{dexterity_mod}]]}} {{always=1}} {{r2=[[1d20 +@{pb} +@{dexterity_mod}]]}} {{attack=1}} {{range=5 ft}} {{damage=1}} {{dmg1flag=1}} {{dmg1=[[ [[floor((@{level} + 1)/6)]]d8 ]]}} {{dmg1type=Fire vs Target}} {{dmg2flag=1}} {{dmg2=[[ @{intelligence_mod} + [[floor((@{level} + 1)/6)]]d8 ]]}} {{dmg2type=Fire vs Adjacent}} {{crit1=[[ [[floor((@{level} + 1)/6)]]d8 ]]}} {{crit2=[[ @{intelligence_mod} + [[floor((@{level} + 1)/6)]]d8 ]]}} {{charname=@{character_name}}} {{desc=?{Sneak Attack?| Yes, ?{Weapon&#124; Longbow/Rapier&#44; [[1d8 +@{dexterity_mod} +[[[[ceil(@{level}/2)]]d6]]]] Normal + [[1d8 +@{dexterity_mod} +[[[[ceil(@{level}/2)]]d6]]]] Critical&#124; Scimitar/Shortsword&#44; [[1d6 +@{dexterity_mod} +[[[[ceil(@{level}/2)]]d6]]]] Critical &#124; Dagger/Whip&#44; [[1d6 +@{dexterity_mod} +[[[[ceil(@{level}/2)]]d6]]]] Critical &#125;| No,?{Weapon&#124; Rapier&#44; [[1d8 +@{dexterity_mod}]] Normal + [[1d8 +@{dexterity_mod}]] Critical&#124; Scimitar/Shortsword&#44; [[1d6 +@{dexterity_mod}]] Normal + [[1d4 +@{dexterity_mod} +[[]] Critical&#124; Dagger/Whip&#44; [[1d4 +@{dexterity_mod}]] Normal + [[1d4 +@{dexterity_mod}]] Critical&#125;}}}
+
+# Weapon choice (STR) & Cantrip: Green-Flame Blade
+&{template:atkdmg} {{rname=Green-Flame Blade}} {{r1=[[1d20 +@{pb} +@{strength_mod}]]}} {{always=1}} {{r2=[[1d20 +@{pb} +@{strength_mod}]]}} {{attack=1}} {{range=5 ft}} {{damage=1}} {{dmg1flag=1}} {{dmg1=[[ [[floor((@{level} + 1)/6)]]d8 ]]}} {{dmg1type=Fire vs Target}} {{dmg2flag=1}} {{dmg2=[[ @{intelligence_mod} + [[floor((@{level} + 1)/6)]]d8 ]]}} {{dmg2type=Fire vs Adjacent}} {{crit1=[[ [[floor((@{level} + 1)/6)]]d8 ]]}} {{crit2=[[ @{intelligence_mod} + [[floor((@{level} + 1)/6)]]d8 ]]}} {{charname=@{character_name}}} {{desc=?{Weapon?| 
+Greatsword/Maul, [[2d6 +@{strength_mod}]] Normal + [[2d6]] Critical|
+Greataxe/Lance, [[1d12 +@{strength_mod}]] Normal + [[1d12]] Critical|
+Glaive/Halberd/Pike, [[1d10 +@{strength_mod}]] Normal + [[2d6]] Critical|
+Battleaxe/Flail/Greatclub/Longsword/Morningstar/Rapier/Warpick/Warhammer, [[1d8 +@{strength_mod}]] Normal + [[1d8]] Critical| 
+Handaxe/Mace/Quarterstaff/Scimitar/Shortsword/Spear/Trident, [[1d6 +@{strength_mod}]] Normal + [[1d4]] Critical| 
+Club/Light Hammer/Sickle/Whip, [[1d4 +@{strength_mod}]] Normal + [[1d4]] Critical}}}
+
+# Weapon choice (DEX) & Cantrip: Green-Flame Blade
+&{template:atkdmg} {{rname=Green-Flame Blade}} {{r1=[[1d20 +@{pb} +@{strength_mod}]]}} {{always=1}} {{r2=[[1d20 +@{pb} +@{strength_mod}]]}} {{attack=1}} {{range=5 ft}} {{damage=1}} {{dmg1flag=1}} {{dmg1=[[ [[floor((@{level} + 1)/6)]]d8 ]]}} {{dmg1type=Fire vs Target}} {{dmg2flag=1}} {{dmg2=[[ @{intelligence_mod} + [[floor((@{level} + 1)/6)]]d8 ]]}} {{dmg2type=Fire vs Adjacent}} {{crit1=[[ [[floor((@{level} + 1)/6)]]d8 ]]}} {{crit2=[[ @{intelligence_mod} + [[floor((@{level} + 1)/6)]]d8 ]]}} {{charname=@{character_name}}} &{template:atkdmg} {{rname=Green-Flame Blade}} {{r1=[[1d20 +@{pb} +@{strength_mod}]]}} {{always=1}} {{r2=[[1d20 +@{pb} +@{strength_mod}]]}} {{attack=1}} {{range=5 ft}} {{damage=1}} {{dmg1flag=1}} {{dmg1=[[ [[floor((@{level} + 1)/6)]]d8 ]]}} {{dmg1type=Fire vs Target}} {{dmg2flag=1}} {{dmg2=[[ @{intelligence_mod} + [[floor((@{level} + 1)/6)]]d8 ]]}} {{dmg2type=Fire vs Adjacent}} {{crit1=[[ [[floor((@{level} + 1)/6)]]d8 ]]}} {{crit2=[[ @{intelligence_mod} + [[floor((@{level} + 1)/6)]]d8 ]]}} {{charname=@{character_name}}} {{desc=?{Weapon?| Battleaxe/Flail/Greatclub/Longsword/Morningstar/Rapier/Warpick/Warhammer, [[1d8 +@{strength_mod}]] Normal + [[1d8]] Critical| Scimitar/Shortsword, [[1d6 +@{strength_mod}]] Normal + [[1d4]] Critical| Dagger/Whip, [[1d4 +@{strength_mod}]] Normal + [[1d4]] Critical}}}
+
+# Rogue: Sneak Attack damage calculation
+[[[[ceil(@{level}/2)]]d6]]
+
+# Rogue: Sneak Attack damage & Weapon choice
+&{template:atkdmg} {{mod=}} {{rname=Sneak Attack}} {{r1=[[1d20 +@{pb} +@{dexterity_mod}]]}} {{always=1}} {{r2=[[1d20 +@{pb} +@{dexterity_mod}]]}} {{attack=1}} {{range=5 ft}} {{charname=@{character_name}}} {{desc=?{Sneak Attack?| Yes, ?{Weapon&#124; Longbow/Rapier&#44; [[1d8 +@{dexterity_mod} +[[[[ceil(@{level}/2)]]d6]]]] Normal + [[1d8 +@{dexterity_mod} +[[[[ceil(@{level}/2)]]d6]]]] Critical&#124; Scimitar/Shortsword&#44; [[1d6 +@{dexterity_mod} +[[[[ceil(@{level}/2)]]d6]]]] Critical &#124; Dagger/Whip&#44; [[1d6 +@{dexterity_mod} +[[[[ceil(@{level}/2)]]d6]]]] Critical &#125;| No,?{Weapon&#124; Rapier&#44; [[1d8 +@{dexterity_mod}]] Normal + [[1d8 +@{dexterity_mod}]] Critical&#124; Scimitar/Shortsword&#44; [[1d6 +@{dexterity_mod}]] Normal + [[1d4 +@{dexterity_mod} +[[]] Critical&#124; Dagger/Whip&#44; [[1d4 +@{dexterity_mod}]] Normal + [[1d4 +@{dexterity_mod}]] Critical&#125;}}}
+
+# Cantr
