@@ -26,8 +26,7 @@ Damage Resistance & Immunities
 /w gm &{template:default} {{name=DR/Immunities}} {{Damage Resistance= @{selected|npc_resistances}}} {{Damage Vulnerability= @{selected|npc_vulnerabilities}}} {{Damage Immunity= @{selected|npc_immunities}}} {{Condition Immunity= @{selected|npc_condition_immunities}}}
 
 Perception
-/w gm %{Selected|npc_perception}
-@{selected|wtype}&{template:npc} {{name=@{selected|npc_name}}} {{rname=Perception}} {{mod=@{selected|npc_perception}}} {{r1=[[1d20+@{selected|npc_perception}]]}} @{selected|rtype}+@{selected|npc_perception}]]}}
+/w gm @{selected|wtype}&{template:npc} {{name=@{selected|npc_name}}} {{rname=Perception}} {{mod=@{selected|npc_perception}}} {{r1=[[1d20+@{selected|npc_perception}]]}} @{selected|rtype}+@{selected|npc_perception}]]}}
 
 Statistics
 /w gm &{template:default} {{name=Stats}} {{Armor Class= @{selected|npc_AC} @{selected|npcd_actype}}} {{Hit Dice= @{selected|npc_hpformula} | [[@{selected|npc_hpformula}]]}} {{Speed= @{selected|npc_speed}}} {{Senses=@{selected|npc_senses}}}
