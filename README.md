@@ -16,4 +16,6 @@ Character sheet template for the convenience of your players. Macros include Abi
 * Rogue: Sneak Attack damage + Weapon Choice
 * Rogue: Sneak Attack damage + Weapon Choice + Cantrip: Green-Flame Blade damage
 * Weapon Choice (STR or DEX) + Cantrip: Green-Flame Blade damage
-*NOTE* Cantrip: Green-Flame Blade damage can be modified to become Cantrip: Booming Bladeby removing the Intelligence modifier
+
+*NOTE*
+Cantrip: Green-Flame Blade damage can be modified to become Cantrip: Booming Bladeby removing the Intelligence modifier
